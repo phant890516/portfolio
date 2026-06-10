@@ -64,7 +64,7 @@ const EXPERIENCE = [
 
 const WORKS = [
   { id: 1, title: 'News App',          cat: 'JavaScript / API',   img: 'images/news.png',    url: 'https://get-xml-news.vercel.app/' },
-  { id: 2, title: 'Wolf Hunter',       cat: 'Next.js',            img: 'images/wolf_hunter_page.png', url: 'https://wolfhunter2023.onrender.com/' },
+  { id: 2, title: 'Wolf Hunter',       cat: 'Next.js',            img: 'images/wolf_hunter_page.png', url: 'https://wolf-hunter2023-l5s1.vercel.app/' },
   { id: 3, title: 'Subkari EC Site',   cat: 'Web Design / Flask', img: 'images/Subkari.png',          url: 'https://subkari.onrender.com' },
   { id: 4, title: 'Galaxy Simulator',  cat: '3D / Three.js',      img: 'images/galaxy.png',           url: 'https://galaxy-simulator-git-main-phants-projects-e741a5f4.vercel.app/' },
   { id: 5, title: 'Budgeting App',     cat: 'Firebase / React',   img: 'images/budgeting16-9.png',    url: 'https://budget-system-psi.vercel.app/' },

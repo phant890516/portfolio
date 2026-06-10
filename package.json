@@ -11,11 +11,11 @@
     "start": "vite preview --port $PORT --host"
   },
   "dependencies": {
-    "framer-motion": "^12.23.12",
     "lucide-react": "^0.554.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sweetalert2": "^11.23.0"
+    "sweetalert2": "^11.23.0",
+    "unicornstudio-react": "^2.1.9"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

@@ -35,7 +35,7 @@ const CERTS = [
   { name: '基本情報技術者',                          org: '情報処理推進機構（IPA）',             date: '2025', color: '#2563eb', icon: '🖥️' },
   { name: 'J検 情報システム試験 システムデザインスキル', org: '日本情報処理検定協会',               date: '2025', color: '#0ea5e9', icon: '🛠️' },
   { name: 'マルチメディア検定 ベーシック',            org: 'CG-ARTS（画像情報教育振興協会）',      date: '2025', color: '#8b5cf6', icon: '🎨' },
-  { name: 'Webデザイナー検定 ベーシック',             org: 'サーティファイ',                     date: '2025', color: '#22c55e', icon: '🌐' },
+  { name: 'Webデザイナー検定 ベーシック',             org: 'CG-ARTS（画像情報教育振興協会）',                     date: '2025', color: '#22c55e', icon: '🌐' },
 ]
 
 const EXPERIENCE = [
@@ -226,7 +226,7 @@ export default function App() {
             LIN<span className="text-blue-400">.</span>DEV
           </button>
 
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden md:flex items-center gap-10">
             {SECTIONS.map(({ id, label }) => (
               <button
                 key={id}

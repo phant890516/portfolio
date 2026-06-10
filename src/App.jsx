@@ -392,11 +392,7 @@ export default function App() {
               {/* Info */}
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-100 mb-2">お問い合わせ情報</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    お仕事のご依頼・採用のご相談など、お気軽にメッセージをお送りください。
-                    通常 1〜2 営業日以内にご返信します。
-                  </p>
+                  <h3 className="text-xl font-bold text-slate-100 mb-2">お問い合わせ</h3>
                 </div>
                 <div className="space-y-3">
                   <a

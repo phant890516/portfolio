@@ -91,7 +91,7 @@ const SkillBar = ({ name, icon, level }) => (
     <div className="flex items-center gap-2">
       <div className="w-20 h-1.5 bg-slate-700 rounded-full overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-400"
+          className="h-full rounded-full bg-gradient-to-r from-violet-500 to-indigo-400"
           style={{ width: `${level}%` }}
         />
       </div>
@@ -101,7 +101,7 @@ const SkillBar = ({ name, icon, level }) => (
 )
 
 const CertCard = ({ name, org, date, color, icon }) => (
-  <div className="card-hover bg-[#111827] rounded-xl border border-[#1e2d45] p-5 flex items-start gap-4">
+  <div className="card-hover bg-[#15132b] rounded-xl border border-[#2a2550] p-5 flex items-start gap-4">
     <div
       className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
       style={{ background: `${color}20` }}
@@ -118,7 +118,7 @@ const CertCard = ({ name, org, date, color, icon }) => (
 
 const TimelineItem = ({ item, isLast }) => {
   const icons = { edu: GraduationCap, work: Briefcase, project: Award }
-  const colors = { edu: '#6366f1', work: '#3b82f6', project: '#22c55e' }
+  const colors = { edu: '#6366f1', work: '#8b5cf6', project: '#22c55e' }
   const Icon = icons[item.type]
   const color = colors[item.type]
   return (
@@ -137,7 +137,7 @@ const TimelineItem = ({ item, isLast }) => {
           <h3 className="font-semibold text-slate-100">{item.title}</h3>
           <span className="tag">{item.period}</span>
         </div>
-        <p className="text-xs font-medium text-blue-400 mb-2">{item.org}</p>
+        <p className="text-xs font-medium text-violet-400 mb-2">{item.org}</p>
         <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
       </div>
     </div>
@@ -146,8 +146,8 @@ const TimelineItem = ({ item, isLast }) => {
 
 const WorkCard = ({ work }) => (
   <a href={work.url} target="_blank" rel="noopener noreferrer" className="group block">
-    <div className="card-hover bg-[#111827] rounded-xl overflow-hidden border border-[#1e2d45] h-full">
-      <div className="relative overflow-hidden aspect-video bg-[#0d1424]">
+    <div className="card-hover bg-[#15132b] rounded-xl overflow-hidden border border-[#2a2550] h-full">
+      <div className="relative overflow-hidden aspect-video bg-[#100d22]">
         <img
           src={work.img}
           alt={work.title}
@@ -160,8 +160,8 @@ const WorkCard = ({ work }) => (
         </div>
       </div>
       <div className="p-4">
-        <p className="text-xs text-blue-400 font-medium mb-1">{work.cat}</p>
-        <h3 className="font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">{work.title}</h3>
+        <p className="text-xs text-violet-400 font-medium mb-1">{work.cat}</p>
+        <h3 className="font-semibold text-slate-100 group-hover:text-violet-400 transition-colors">{work.title}</h3>
       </div>
     </div>
   </a>
@@ -217,13 +217,13 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#080d1a]">
+    <div className="min-h-screen bg-[#0b0a1e]">
 
       {/* ── Navigation ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#080d1a]/80 backdrop-blur-md border-b border-white/5">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0b0a1e]/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo('hero')} className="text-xl font-bold text-white tracking-tight hover:opacity-80 transition-opacity">
-            LIN<span className="text-blue-400">.</span>DEV
+            LIN<span className="text-violet-400">.</span>DEV
           </button>
 
           <nav className="hidden md:flex items-center gap-10">
@@ -240,7 +240,7 @@ export default function App() {
 
           <button
             onClick={() => scrollTo('contact')}
-            className="hidden md:flex items-center gap-2 bg-blue-500 hover:bg-blue-400 active:bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors shadow-sm shadow-blue-500/30"
+            className="hidden cursor-pointer md:flex items-center gap-2 bg-violet-500 hover:bg-violet-400 active:bg-violet-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors shadow-sm shadow-violet-500/30"
           >
             <Mail size={14} /> お問い合わせ
           </button>
@@ -255,12 +255,12 @@ export default function App() {
         </div>
 
         {menuOpen && (
-          <div className="md:hidden bg-[#0d1424] border-t border-white/5 px-6 py-4 flex flex-col gap-3">
+          <div className="md:hidden bg-[#100d22] border-t border-white/5 px-6 py-4 flex flex-col gap-3">
             {SECTIONS.map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="text-left text-slate-400 hover:text-blue-400 font-medium py-1.5 border-b border-white/5 last:border-0"
+                className="text-left text-slate-400 hover:text-violet-400 font-medium py-1.5 border-b border-white/5 last:border-0"
               >
                 {label}
               </button>
@@ -278,10 +278,10 @@ export default function App() {
               <Unicorn/>
             </div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#080d1a] z-10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0b0a1e] z-10 pointer-events-none" />
 
           <div className="text-center px-6 relative z-20">
-            {/* <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-blue-300 text-sm font-medium rounded-full mb-7">
+            {/* <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-violet-300 text-sm font-medium rounded-full mb-7">
               フルスタックエンジニア志望
             </span>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-3 leading-tight tracking-tight drop-shadow-lg">
@@ -299,7 +299,7 @@ export default function App() {
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={() => scrollTo('works')}
-                className="flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold px-7 py-3 rounded-xl shadow-lg shadow-blue-500/30 cursor-pointer transition-all"
+                className="flex items-center gap-2 bg-violet-500 hover:bg-violet-400 text-white font-semibold px-7 py-3 rounded-xl shadow-lg shadow-violet-500/30 cursor-pointer transition-all"
               >
                 作品を見る <ArrowRight size={16} />
               </button>
@@ -316,7 +316,7 @@ export default function App() {
         </section>
 
         {/* ── Skills ── */}
-        <section id="skills" className="py-24 px-6 bg-[#080d1a]">
+        <section id="skills" className="py-24 px-6 bg-[#0b0a1e]">
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-12">
               <h2 className="section-title">スキル</h2>
@@ -340,7 +340,7 @@ export default function App() {
         </section>
 
         {/* ── Certifications ── */}
-        <section id="certs" className="py-24 px-6 bg-[#0d1424]">
+        <section id="certs" className="py-24 px-6 bg-[#100d22]">
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-12">
               <h2 className="section-title">資格・認定</h2>
@@ -353,7 +353,7 @@ export default function App() {
         </section>
 
         {/* ── Experience ── */}
-        <section id="exp" className="py-24 px-6 bg-[#080d1a]">
+        <section id="exp" className="py-24 px-6 bg-[#0b0a1e]">
           <div className="max-w-3xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-12">
               <h2 className="section-title">経歴</h2>
@@ -368,7 +368,7 @@ export default function App() {
         </section>
 
         {/* ── Projects ── */}
-        <section id="works" className="py-24 px-6 bg-[#0d1424]">
+        <section id="works" className="py-24 px-6 bg-[#100d22]">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-12">
               <h2 className="section-title">プロジェクト</h2>
@@ -381,7 +381,7 @@ export default function App() {
         </section>
 
         {/* ── Contact ── */}
-        <section id="contact" className="py-24 px-6 bg-[#080d1a]">
+        <section id="contact" className="py-24 px-6 bg-[#0b0a1e]">
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-12">
               <h2 className="section-title">連絡先</h2>
@@ -397,10 +397,10 @@ export default function App() {
                 <div className="space-y-3">
                   <a
                     href="mailto:phant890516@gmail.com"
-                    className="flex items-center gap-3 p-4 bg-[#111827] rounded-xl border border-[#1e2d45] hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all group"
+                    className="flex items-center gap-3 p-4 bg-[#15132b] rounded-xl border border-[#2a2550] hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/10 transition-all group"
                   >
-                    <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                      <Mail size={17} className="text-blue-400" />
+                    <div className="w-10 h-10 bg-violet-500/10 rounded-lg flex items-center justify-center group-hover:bg-violet-500/20 transition-colors">
+                      <Mail size={17} className="text-violet-400" />
                     </div>
                     <div>
                       <p className="text-xs text-slate-500">Email</p>
@@ -411,7 +411,7 @@ export default function App() {
                     href="https://github.com/phant890516"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 bg-[#111827] rounded-xl border border-[#1e2d45] hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all group"
+                    className="flex items-center gap-3 p-4 bg-[#15132b] rounded-xl border border-[#2a2550] hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/10 transition-all group"
                   >
                     <div className="w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
                       <Github size={17} className="text-slate-300" />
@@ -425,7 +425,7 @@ export default function App() {
               </div>
 
               {/* Form */}
-              <form onSubmit={onSubmit} className="bg-[#111827] rounded-2xl border border-[#1e2d45] p-8 space-y-5">
+              <form onSubmit={onSubmit} className="bg-[#15132b] rounded-2xl border border-[#2a2550] p-8 space-y-5">
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-medium text-slate-400 mb-1.5">お名前</label>
                   <input
@@ -434,7 +434,7 @@ export default function App() {
                     name="name"
                     placeholder="山田 太郎"
                     required
-                    className="w-full h-11 px-4 bg-[#0d1424] border border-[#1e2d45] rounded-lg text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full h-11 px-4 bg-[#100d22] border border-[#2a2550] rounded-lg text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all"
                   />
                 </div>
                 <div>
@@ -445,7 +445,7 @@ export default function App() {
                     name="email"
                     placeholder="email@example.com"
                     required
-                    className="w-full h-11 px-4 bg-[#0d1424] border border-[#1e2d45] rounded-lg text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full h-11 px-4 bg-[#100d22] border border-[#2a2550] rounded-lg text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all"
                   />
                 </div>
                 <div>
@@ -456,14 +456,14 @@ export default function App() {
                     rows={5}
                     placeholder="ご用件をご記入ください"
                     required
-                    className="w-full px-4 py-3 bg-[#0d1424] border border-[#1e2d45] rounded-lg text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-[#100d22] border border-[#2a2550] rounded-lg text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all resize-none"
                   />
                 </div>
                 {formResult && <p className="text-sm text-red-400">{formResult}</p>}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-12 bg-blue-500 hover:bg-blue-400 active:bg-blue-600 disabled:bg-blue-500/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                  className="w-full h-12 bg-violet-500 hover:bg-violet-400 active:bg-violet-600 disabled:bg-violet-500/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-violet-500/20"
                 >
                   <Mail size={16} /> {isSubmitting ? '送信中...' : '送信する'}
                 </button>
@@ -474,7 +474,7 @@ export default function App() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#050912] text-slate-600 py-8 text-center text-sm border-t border-white/5">
+      <footer className="bg-[#08071a] text-slate-600 py-8 text-center text-sm border-t border-white/5">
         <p>© 2025 LIN HENGYOU. ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
